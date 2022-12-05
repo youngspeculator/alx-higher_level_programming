@@ -50,4 +50,3 @@ def div(a, b):
     """
 
     return int(a / b)
-    
