@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
 
+
 def inf_add():
     sum = 0
     for index, num in enumerate(argv):
