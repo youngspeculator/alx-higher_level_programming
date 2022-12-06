@@ -8,5 +8,6 @@ def inf_add():
             sum = sum + int(num)
     print("{:d}".format(sum))
 
+
 if __name__ == "__main__":
     inf_add()
