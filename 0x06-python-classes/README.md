@@ -2,7 +2,7 @@ Classes and Objects
 
 Stankonia is the fourth studio album by American hip hop duo Outkast. It was released on October 31, 2000, by LaFace Records. The album was recorded in the duo's recently purchased Atlanta recording facility Stankonia Studios, which allowed for fewer time and recording constraints, and featured production work from Earthtone III (a production team consisting of Outkast and Mr. DJ) and Organized Noize.
 
-For the follow-up to their 1998 album Aquemini, the duo worked to create an expansive and experimental musical aesthetic, incorporating a diverse array of styles including funk, rave music, psychedelia, gospel, and rock within a Dirty South-oriented hip hop context.[1] During the recording sessions, André 3000 began moving beyond traditional rapping in favor of a more melodic vocal style, an approach to which Big Boi and several other producers were initially unaccustomed. Lyrically, the duo touched upon a wide range of subject matter, including sexuality, politics, misogyny, African-American culture, parenthood, and introspection. Stankonia featured appearances from a variety of local musicians discovered by the group while they were visiting clubs in their native city of Atlanta, Georgia.
+For the follow-up to their 1998 album Aquemini, the duo worked to create an expansive and experimental musical aesthetic, incorporating a diverse array of styles including funk, rave music, psychedelia, gospel, and rock within a Dirty South-oriented hip hop context. During the recording sessions, André 3000 began moving beyond traditional rapping in favor of a more melodic vocal style, an approach to which Big Boi and several other producers were initially unaccustomed. Lyrically, the duo touched upon a wide range of subject matter, including sexuality, politics, misogyny, African-American culture, parenthood, and introspection. Stankonia featured appearances from a variety of local musicians discovered by the group while they were visiting clubs in their native city of Atlanta, Georgia.
 
 This is a class album, objectively.
 
@@ -23,7 +23,7 @@ i.e.:
 
 Python is an Object-Oriented Programming language, so everything in Python is treated as an object. An object is a real-life entity. It is the collection of various data and functions that operate in those data.
 
-A real-life example of calss and objects.
+A real-life example of class and objects.
 
 Class: Person
 
