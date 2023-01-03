@@ -1,0 +1,81 @@
+Using 5-text_indentation.py
+
+#Run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+
+This is a module which defines a function that prints a text with 2 new lines
+after each of these characters: `.` , `?` and `:`
+```text_indentation()``` takes in one arg: text, which must be a string
+
+Testing for a string value
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("""Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere.""")
+    >>> Fortasse id optimum, sed ubi illud:
+        <BLANKLINE>
+        Plus semper voluptatis?
+        <BLANKLINE>
+        Teneo, inquit, finem illi videri nihil dolere.
+        <BLANKLINE>
+
+Testing for a non-string value
+    >>> text_indentation(42)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+Testing for spaces at beginning of line
+    >>> text_indentation("   Hi there.")
+    Hi there.
+    <BLANKLINE>
+
+:::
+    >>> text_indentation("    How about now.      What about this?")
+    How about now.
+    <BLANKLINE>
+    What about this?
+    <BLANKLINE>
+
+:::
+    >>> text_indentation("The greatest Wu-tang solo album is:\nOB4CL.")
+    The greatest Wu-tang solo albums is:
+    <BLANKLINE>
+    <BLANKLINE>
+    OB4CL.
+    <BLANKLINE>
+
+:::
+    >>> text_indentation("\n\n\n Supreme Clientele was released in 1999.")
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    Supreme Clientele was released in 1999.
+    <BLANKLINE>
+
+:::
+    >>> text_indentation("A sneaky \n new line.")
+    A sneaky
+    new line.
+    <BLANKLINE>
+
+:::
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+:::
+    >>> text_indentation({"RZA":1974, "ODB":1978})
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+:::
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+:::
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() mission 1 required positional argument: 'text'

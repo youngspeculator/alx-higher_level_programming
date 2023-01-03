@@ -1,0 +1,94 @@
+Using 0-add_integer.py
+
+#Run the test with python3 -m doctest -v ./tests/0-add_integer.txt
+
+This is a module which defines an integer addition function 'add_integer(a, b=98)'
+```add_integer()``` will return the addition of the two args.
+                Mathematically, it is equivalent to the `+` operand
+
+Import the function from module:
+        >>> add_integer = __import__('0-add_integer').add_integer
+
+Usage:
+
+Testing two positive integers
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> print(add_integer(1, 2))
+        3
+
+Testing heterogenous integers (positive and negative)
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> print(add_integer(100, -2))
+        98
+
+Testing floating point values
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> print(add_integer(6.0, 2.0))
+        8
+
+Floating and non-floating point values
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> print(add_integer(2.3, -5))
+        -3
+::
+        >>> add_integer = __import__('0-add_integer').add_integer
+        >>> print(add_integer(100.3, -2))
+        98
+
+
+Testing one integer
+        >>> add_integer = __import_-('0-add_integer').add_integer
+        >>> print(add_integer(2))
+        100
+        #the second arg is optional. by default it is 98
+
+WHAT ABOUT non-numbers
+```add_integer()``` requires that both args are either ints or floats
+if this requirement is not met, i.e either arg is a non-integer or a non-float, a TypeError is raised
+
+Testing one integer and a string
+        >>> add_integer('0-add_integer').add_integer
+        >>> print(add_integer(4, "School"))
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+::
+        >>> add_integer('0-add_integer').add_integer
+        >>> print(add_integer("Bayern", 7))
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Testing invalid types
+        >>> add_integer('0-add_integer').add_integer
+        >>> print(add_integer(None))
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Testing a floating-point value and a string
+        >>> add_integer('0-add_integer').add_integer
+        >>> print(add_integer(3.1, "School"))
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+Testing two non-floats / non-ints
+#only the first arg will be read and TypeError generated
+        >>> print(add_integer("Hello", "World"))
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Testing for infinity arg
+        >>> print(add_integer(float('inf')))
+        Traceback (most recent call last):
+        ...
+        OverflowError: can't convert float infinity to integer
+
+Testing with NaN numbers
+        >>> print(add_integer(float('nan')))
+        Traceback (most recent call last):
+        ...
+        ValueError: cannot convert float NaN to integer

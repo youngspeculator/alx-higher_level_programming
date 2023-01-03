@@ -1,0 +1,45 @@
+Using 3-say_my_name.py
+
+#Run test with python3 -m doctest -v ./tests/3-say_my_name.py
+
+This is a module which defines a function that prints ``My name is <first name> <last name>``
+```say_my_name()``` takes in two args: (<first name><last name>)
+                    and prints out a valid output
+
+Testing for two strings
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+        >>> print(say_my_name("Roc", "Marciano"))
+        My name is Roc Marciano
+
+:::
+        >>> print(say_my_name("King", "Louis III"))
+        My name is King Louis III
+
+Testing for one string
+        >>> print(say_my_name("", "Pele"))
+        My name is Pele
+
+Testing for one string and a non-string
+        >>> print(say_my_name("Maradona" 10))
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+:::
+        >>> print(say_my_name([Ronaldo, 7, Al Nassr], "Cristiano"))
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+Testing for no name provided
+        >>> print(say_my_name(None))
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+:::
+        >>> print(say_my_name())
+        Traceback (most recent call last):
+        ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
