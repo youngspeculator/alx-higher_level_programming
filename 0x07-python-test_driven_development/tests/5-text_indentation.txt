@@ -1,81 +1,83 @@
-Using 5-text_indentation.py
+5-text_indentation Module:
 
-#Run test with python3 -m doctest -v ./tests/5-text_indentation.txt
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
 
-This is a module which defines a function that prints a text with 2 new lines
-after each of these characters: `.` , `?` and `:`
-```text_indentation()``` takes in one arg: text, which must be a string
+    >>> t="Hello. I am a string? Here is what you should do: parse me."
 
-Testing for a string value
-    >>> text_indentation = __import__('5-text_indentation').text_indentation
-    >>> text_indentation("""Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere.""")
-    >>> Fortasse id optimum, sed ubi illud:
-        <BLANKLINE>
-        Plus semper voluptatis?
-        <BLANKLINE>
-        Teneo, inquit, finem illi videri nihil dolere.
-        <BLANKLINE>
+Usage:
 
-Testing for a non-string value
-    >>> text_indentation(42)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+    >>> text_indentation("Howdy, Yall!")
+    Howdy, Yall!
 
-Testing for spaces at beginning of line
-    >>> text_indentation("   Hi there.")
-    Hi there.
+    >>> text_indentation(t)
+    Hello.
+    <BLANKLINE>
+    I am a string?
+    <BLANKLINE>
+    Here is what you should do:
+    <BLANKLINE>
+    parse me.
     <BLANKLINE>
 
-:::
-    >>> text_indentation("    How about now.      What about this?")
-    How about now.
+    >>> t="Hello. : \nI am a string? .\n"
+    >>> text_indentation(t)
+    Hello.
     <BLANKLINE>
-    What about this?
+    :
+    <BLANKLINE>
+    <BLANKLINE>
+    I am a string?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
     <BLANKLINE>
 
-:::
-    >>> text_indentation("The greatest Wu-tang solo album is:\nOB4CL.")
-    The greatest Wu-tang solo albums is:
+    >>> t=" : . ? "
+    >>> text_indentation(t)
+    :
     <BLANKLINE>
+    .
     <BLANKLINE>
-    OB4CL.
-    <BLANKLINE>
-
-:::
-    >>> text_indentation("\n\n\n Supreme Clientele was released in 1999.")
-    <BLANKLINE>
-    <BLANKLINE>
-    <BLANKLINE>
-    Supreme Clientele was released in 1999.
+    ?
     <BLANKLINE>
 
-:::
-    >>> text_indentation("A sneaky \n new line.")
-    A sneaky
-    new line.
+    >>> t = "    MY SPOON IS TOO BIG!...    I am a banana.\n     blearg    "
+    >>> text_indentation(t)
+    MY SPOON IS TOO BIG!.
     <BLANKLINE>
+    .
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+    I am a banana.
+    <BLANKLINE>
+    <BLANKLINE>
+    blearg
 
-:::
-    >>> text_indentation(7)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+    >>> t = "Mwa" + "ha" * 2
+    >>> text_indentation(t)
+    Mwahaha
 
-:::
-    >>> text_indentation({"RZA":1974, "ODB":1978})
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+    >>> text_indentation("")
 
-:::
-    >>> text_indentation(None)
-    Traceback (most recent call last):
-    ...
-    TypeError: text must be a string
+On Errors:
 
-:::
     >>> text_indentation()
     Traceback (most recent call last):
-    ...
-    TypeError: text_indentation() mission 1 required positional argument: 'text'
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("ble", "ooh", "wah")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 3 were given
+
+    >>> text_indentation(4)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(-4)
+    Traceback (most recent call last):
+    TypeError: text must be a string
