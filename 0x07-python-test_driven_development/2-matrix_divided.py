@@ -19,12 +19,12 @@ def matrix_divided(matrix, div):
     """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
-    elif div is 0:
+    elif div == 0:
         raise ZeroDivisionError("division by zero")
     wrong_type = "matrix must be a matrix (list of lists) of integers/floats"
     wrong_size = "Each row of the matrix must have the same size"
     new_matrix = []
-    if matrix is None or len(matrix) is 0 or len(matrix[0]) is 0:
+    if matrix is None or len(matrix) == 0 or len(matrix[0]) == 0:
         raise TypeError(wrong_type)
     previous = len(matrix[0])
 
