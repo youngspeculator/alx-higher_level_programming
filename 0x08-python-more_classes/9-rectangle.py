@@ -86,7 +86,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """Return a rectangle with width == height
+        """Return a rectangle with width == height == size
         Args: size (int)
         """
         return (cls(size, size))
@@ -106,7 +106,7 @@ class Rectangle:
         """Returns a string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
-        return rec
+        return rect
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
