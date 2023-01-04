@@ -70,35 +70,35 @@ class Rectangle:
         return ((self.__width + self.__height) * 2)
 
     @staticmethod
-    def bigger_or_equal(rec_1, rec_2):
+    def bigger_or_equal(rect_1, rect_2):
         """Return the rectangle with the larger area
            Args:
-                rec_1: first rectangle
-                rec_2: second rectangle
+                rect_1: first rectangle
+                rect_2: second rectangle
         """
-        if not isinstance(rec_1, Rectangle):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rec_1 must be an instance of Rectangle")
-        if not isinstance(rec_2, Rectangle):
-            raise TypeError("rec_2 must be an instance of Rectangle")
-        if rec_1.area() >= rec_2.area():
-            return (rec_1)
-        return (rec_2)
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
 
     def __str__(self):
         """Prints the rectangle with the character `#`"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        rec = []
+        rect = []
         for i in range(self.__height):
-            [rec.append('#') for j in range(self.width)]
+            [rect.append('#') for j in range(self.width)]
             if i != self.__height - 1:
-                rec.append("\n")
+                rect.append("\n")
         return ("".join(rec))
 
     def __repr__(self):
         """Returns a string representation of the rectangle"""
-        rec = "Rectangle(" + str(self.__width)
-        rec += ", " + str(self.__height) + ")"
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
         return rec
 
     def __del__(self):
