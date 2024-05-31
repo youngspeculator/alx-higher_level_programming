@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 import random
-num = random.randomint(-10000, 10000)
-pos = "positive"
-zer = "zero"
-neg = "negative"
-print("{} is ".format(num), end="")
-if (num > 0):
-	print("{}".format(pos))
-if (num == 0):
-	print("{}".format(zer))
-if (num < 0):
-	print("{}".format(neg))
+number = random.randint(-10000, 10000)
+if number < 0:
+	last_digit = -(-number % 10)
+else:
+	last_digit = number % 10
+if last_digit > 5:
+    print("Last digit of {} is {} and is greater than 5.".format(number, last_digit))
+elif last_digit == 0:
+    print("Last digit of {} is {} and is 0.".format(number, last_digit))
+elif last_digit < 6 and last_digit != 0:
+    print("Last digit of {} is {} and is less than 6 and \
+not 0".format(number, last_digit))
+else:
+    print("Invalid input")
