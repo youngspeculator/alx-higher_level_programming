@@ -6,7 +6,7 @@ zer = "zero"
 neg = "negative"
 print("{} is ".format(num), end="")
 if (num > 0):
-	print("{}".foramt(pos))
+	print("{}".format(pos))
 if (num == 0):
 	print("{}".format(zer))
 if (num < 0):
